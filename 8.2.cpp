@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 using namespace std;
 
@@ -32,3 +33,39 @@ int main() {
 
     return 0;
 }
+=======
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    void normal() {
+        cout << "Base::normal (early binding)\n";
+    }
+
+    virtual void special() {
+        cout << "Base::special\n";
+    }
+};
+
+class Derived : public Base {
+public:
+    void normal() {
+        cout << "Derived::normal\n";
+    }
+
+    void special() override {
+        cout << "Derived::special (late binding)\n";
+    }
+};
+
+int main() {
+    Derived d;
+    Base *p = &d;        // base pointer to a derived object
+
+    p->normal();         // EARLY: Base::normal
+    p->special();        // LATE: Derived::special
+
+    return 0;
+}
+>>>>>>> bb7a10374dc0e5456bf47fc1efad8b0641cac135

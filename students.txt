@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 Asha 91
 Ravi 78
 Meera 88
+=======
+Asha 91
+Ravi 78
+Meera 88
+>>>>>>> bb7a10374dc0e5456bf47fc1efad8b0641cac135
